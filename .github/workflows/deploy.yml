@@ -10,8 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      DEPLOY_SERVER: 193.2.72.46
-      DEPLOY_USER: notes-deploy-user
+      DEPLOY_SERVER: $${ secrets.NOTES_DEPLOY_IP }}
+      DEPLOY_USER: ${{ secrets.NOTES_DEPLOY_USER }}
 
     steps:
     - name: Set up SSH key
