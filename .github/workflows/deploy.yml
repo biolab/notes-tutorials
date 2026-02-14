@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      DEPLOY_SERVER: $${ secrets.NOTES_DEPLOY_IP }}
+      DEPLOY_SERVER: ${{ secrets.NOTES_DEPLOY_IP }}
       DEPLOY_USER: ${{ secrets.NOTES_DEPLOY_USER }}
 
     steps:
