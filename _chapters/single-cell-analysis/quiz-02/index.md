@@ -139,7 +139,7 @@ Map the genes in the dataset to the Entrez database.
   timeout={10}>
   <Explanation after="correctOrMaxTrials">
   <!!! retina !!!>
-  ![](sc-ex2-q8-exp.jpg)
+  ![](sc-ex2-q7-exp.jpg)
   </Explanation>
 </Question>
 
@@ -164,6 +164,9 @@ Download the sample of a pancreas single cell gene expression dataset ([pancreas
   trials={2}
   timeout={10}>
   <Explanation after="correctOrMaxTrials">
+
+  <!!! retina !!!>
+  ![](sc-ex2-q8-exp.jpg)
   </Explanation>
 </Question>
 
@@ -201,6 +204,11 @@ b) Using Harmony widget (leave all parameters at their default values)
   trials={2}
   timeout={10}>
   <Explanation after="correctOrMaxTrials">
+  The t-SNE plot produced by Align Datasets shows the most effective batch correction. When colored by cell type, it displays well-defined and clearly separated clusters, indicating preservation of biological structure. At the same time, when colored by batch, the cells are well mixed across clusters, showing that batch effects have been successfully removed.
+  <!!! retina !!!>
+  ![](sc-ex2-q101-exp.jpg)
+  ![](sc-ex2-q102-exp.jpg)
+  ![](sc-ex2-q103-exp.jpg)
   </Explanation>
 </Question>
 
@@ -225,5 +233,9 @@ Compare this plot with the previous t-SNE plot obtained using Harmony with defau
   trials={2}
   timeout={10}>
   <Explanation after="correctOrMaxTrials">
+  <!!! retina !!!>
+  The t-SNE plot obtained using **theta = 2.5** and **30 principal components** shows improved results compared to the default Harmony settings. Cells from different batches are better mixed, indicating more effective removal of batch effects. At the same time, clusters corresponding to cell types are more clearly separated, showing improved preservation of biological structure.
+  ![](sc-ex2-q111-exp.jpg)
+  ![](sc-ex2-q112-exp.jpg)
   </Explanation>
 </Question>
