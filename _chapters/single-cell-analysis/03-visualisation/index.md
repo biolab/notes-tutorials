@@ -2,7 +2,7 @@
 title: 'Visualizing Single Cell Landscapes'
 ---
 
-Let us load some single-cell gene expression data and organize the cells in two-dimensional visualizations. We will use the following workflow, and within it, compare two popular data visualization approaches, principal component analysis and t-distributed stochastic neighbor embedding. 
+Let us load some single-cell gene expression data and organize the cells in two-dimensional visualizations. We will use the following workflow, and within it, compare two popular data visualization approaches, principal component analysis (PCA) and t-distributed stochastic neighbor embedding (t-SNE). 
 
 <!!! float-aside !!!>
 &nbsp;  
@@ -10,7 +10,7 @@ Let us load some single-cell gene expression data and organize the cells in two-
 
 ![](sc-notes-02-01_75.jpg)
 
-From a list of examples in [Single Cell Datasets](https://orangedatamining.com/widget-catalog/single-cell/single_cell_datasets/), let us choose the data on mononuclear cells from bone marrow (Zheng et al., Nat Comm 2017). This data sets has already been preprocessed (to some degree) and comes with a selection of 1,000 genes. 
+From a list of examples in [Single Cell Datasets](https://orangedatamining.com/widget-catalog/single-cell/single_cell_datasets/), let us again choose the data on mononuclear cells from bone marrow (Zheng et al., Nat Comm 2017). This data sets has already been preprocessed (to some degree) and comes with a selection of 1,000 genes. 
 
 <!!! width-max !!!>
 ![](sc-notes-02-02_75.jpg)
@@ -20,7 +20,7 @@ To pass only the [PCA](https://orangedatamining.com/widget-catalog/unsupervised/
 
 We pass the data to [PCA](https://orangedatamining.com/widget-catalog/unsupervised/PCA/) with the scree diagram, a chart that shows how much of the variance is explained with a first few components. [PCA](https://orangedatamining.com/widget-catalog/unsupervised/PCA/) transforms our data to a new coordinate system defined by principal components, where the components are orthogonal to each other and where the transformation is constructed so that the first component explains most of the variance, then second-most of the remaining variance, and so on.
 
-A conceptually very different technique to PCA is [t-SNE](https://orangedatamining.com/widget-catalog/unsupervised/tsne/), which embeds the data into twodimensions so that cells with similar expression stay together.
+A conceptually very different technique to PCA is [t-SNE](https://orangedatamining.com/widget-catalog/unsupervised/tsne/), which embeds the data into two dimensions so that cells with similar expression stay together.
 
 <!!! float-aside !!!>
 &nbsp;  

@@ -11,7 +11,7 @@ In single cell analysis, we often deal with data from several different sources,
 
 Batch effects are problematic because they hinder our ability to measure true biological variation between samples, which is what we are interested in. Luckily, they can be dealt with computationally by aligning data from different batches. 
 
-There are different approaches to align data sets and remove batch effects. Orange currently implements two, one through the [Batch Effect Removal](https://orangedatamining.com/widget-catalog/single-cell/batch_effect_removal/) widget and the other, more standard, using canonical correlation implemented in the widget [Align Datasets](https://orangedatamining.com/widget-catalog/single-cell/align_datasets/). 
+There are different approaches to align data sets and remove batch effects. Orange currently implements three: one through the [Batch Effect Removal](https://orangedatamining.com/widget-catalog/single-cell/batch_effect_removal/) widget, the second, more standard, using canonical correlation implemented in the widget [Align Datasets](https://orangedatamining.com/widget-catalog/single-cell/align_datasets/) and the third, most recently added, in the [Harmony] widget.
 
 We will consider human pancreas cell data from two separate research studies: a sample from a study by [Baron et al.](https://pubmed.ncbi.nlm.nih.gov/27667365/) and the other a sample from a study by [Xin et al.](https://pubmed.ncbi.nlm.nih.gov/27667665/). We want to merge our two sample datasets, coming from distinct batches, and plot them together. But before we do that, let's apply some preprocessing steps.
 
@@ -22,7 +22,7 @@ Let's apply some basic preprocessing steps to the second dataset as well. We can
 <!!! width-max !!!>
 ![](sc-notes-04-01_75.jpg)
 
-Now we can concatenate the two data sets by sending both to the Concatenate widget. Here, I select the option to keep only the variables that appear in both tables and append the data source ID as a new class attribute. When we open the concatenated dataset in a table, we now see a new column called Source ID.
+Now we can concatenate the two data sets by sending both to the [Concatenate](https://orangedatamining.com/widget-catalog/transform/concatenate/) widget. Here, I select the option to keep only the variables that appear in both tables and append the data source ID as a new class attribute. When we open the concatenated dataset in a table, we now see a new column called Source ID.
 
 <!!! width-max !!!>
 ![](sc-notes-04-02_75.jpg)
@@ -39,7 +39,7 @@ In our exploration of data integration methods, we'll first look at a technique 
 
 Next, let's revisit the Align Datasets widget to fine-tune the parameters for potentially improved clustering. A common strategy is to start with a reduced number of components. Orange seamlessly propagates the transformed data to t-SNE, where we see an updated plot. The alignment between the two datasets appears significantly improved.
 
-Let's explore the other data alignment method implemented by the Batch Effect Removal widget. We add this widget to our canvas and feed it the combined data. When opening the widget we have to set the distinguishing feature for different batches; in our case, this is the Source ID. We'll also leave the "Skip zero expressions" option unchecked. After applying this correction and visualizing the results in t-SNE, with colors representing cell classes and shapes representing data sources, we observe an interesting result. While some clusters of identical cell types from different sources merge into cohesive units, others remain distinct. It appears that the Align Datasets widget outperformed the Batch Effect Removal method in this case.
+Let's explore the second data alignment method implemented by the Batch Effect Removal widget. We add this widget to our canvas and feed it the combined data. When opening the widget we have to set the distinguishing feature for different batches; in our case, this is the Source ID. We'll also leave the "Skip zero expressions" option unchecked. After applying this correction and visualizing the results in t-SNE, with colors representing cell classes and shapes representing data sources, we observe an interesting result. While some clusters of identical cell types from different sources merge into cohesive units, others remain distinct. It appears that the Align Datasets widget outperformed the Batch Effect Removal method in this case.
 
 <!!! width-max !!!>
 ![](sc-notes-04-05_75.jpg)
