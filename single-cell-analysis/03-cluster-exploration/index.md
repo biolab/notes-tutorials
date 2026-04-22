@@ -1,6 +1,8 @@
 ---
 title: 'Clusters'
 subTitle: ''
+requireLogin: false
+quizThreshold: 0.6
 chapters: 
     - single-cell-analysis/06-marker-genes
     - single-cell-analysis/07-clusters

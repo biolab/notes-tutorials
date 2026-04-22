@@ -1,6 +1,8 @@
 ---
 title: 'Quality Control, Preprocessing and Batch Effect Correction'
 subTitle: ''
+requireLogin: false
+quizThreshold: 0.6
 chapters: 
     - single-cell-analysis/04-preprocessing
     - single-cell-analysis/05-batch-effects

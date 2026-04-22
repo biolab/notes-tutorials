@@ -1,6 +1,8 @@
 ---
 title: 'Single-Cell Expression Data'
 subTitle: ''
+requireLogin: false
+quizThreshold: 0.6
 chapters: 
     - single-cell-analysis/01-introduction
     - single-cell-analysis/02-sc-data

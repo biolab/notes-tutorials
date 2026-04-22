@@ -1,5 +1,5 @@
 ---
-title: 'Clustering and Cell Type Identification'
+title: 'Quiz'
 ---
 
 
@@ -12,7 +12,7 @@ Above you can see a t-SNE plot of the retinal dataset showing expected clusters 
 
 
 <Question
-  id="sx-ex4-q1"
+  id="sc-ex3-q1"
   points={1}
   type="multi"
   question="Which cluster on the plot above most likely corresponds to cone cells?"
@@ -25,7 +25,7 @@ Above you can see a t-SNE plot of the retinal dataset showing expected clusters 
 
 
 <Question
-  id="sc-ex4-q2"
+  id="sc-ex3-q2"
   points={1}
   type="multi"
   question="Which cluster on the plot above most likely corresponds to retinal ganglion cells?"
@@ -40,7 +40,7 @@ Above you can see a t-SNE plot of the retinal dataset showing expected clusters 
 Liang et al. report that in the peripheral tissue the proportion of rods is higher than the proportion of rods in the macular tissue. Does this hold for our dataset sample? Try using the Distributions widget to figure this out. 
 
 <Question
-  id="ex4-q3"
+  id="sc-ex3-q3"
   points={1}
   type="multi"
   question="In our sample, the proportion of rods is higher in the peripheral tissue than the proportion of rods in the macular tissue:"
@@ -55,7 +55,7 @@ Liang et al. report that in the peripheral tissue the proportion of rods is high
 Select the top 100 genes that are differentially expressed in cones in comparison to non-cones (T-test). Forward them to the GO widget. Sort the lower list by increasing p-value.
 
 <Question
-  id="ex3-q4"
+  id="sc-ex3-q4"
   points={1}
   type="multi"
   question="Which among these GO terms have a high p-value and have an enrichment score above 40?"
@@ -70,7 +70,7 @@ Select the top 100 genes that are differentially expressed in cones in compariso
 Try to determine [the tissue source of the single-cell dataset from a human ](https://file.biolab.si/tmp/sc-quiz-anonymous-sample.tab). (Try using Marker Genes widget, Annotator and, if need be, a quick web search)
 
 <Question
-  id="ex4-q1"
+  id="sc-ex3-q5"
   points={1}
   type="multi"
   question="From which organ tissue do the cells from the dataset most likely come from?"

@@ -1,10 +1,10 @@
 ---
-title: 'Quality Control and Data Preprocessing'
+title: 'Quiz'
 ---
 
 ### Task 1 - Quality control 
 
-Perform quality control on the expression matrix.
+Perform quality control on the [expression matrix](http://file.biolab.si/datasets/sc-quiz-sample1500.tab.gz) of the retinal dataset from the study by Liang et al. (2019).
 
 a) Discard genes that were not detected in at least 1% of all cells.
 
@@ -32,7 +32,7 @@ a) Discard genes that were not detected in at least 1% of all cells.
   points={1}
   type="multi"
   question="What is the primary reason for filtering genes before further analysis?"
-  scorer={(answer) => answer === "to remove genes that are never expressed or expressed in too few cells."}
+  scorer={(answer) => answer === "to remove uninformative genes that are never expressed or expressed in too few cells."}
   options={[
     "To remove uninformative genes that are never expressed or expressed in too few cells.",
     "To ensure that every gene is expressed in at least half of the cells.",
@@ -108,7 +108,7 @@ c) Filter cells based on a minimum number of 6000 and a maximum number of 80000 
 Normalize expression values for each gene in each cell to counts per 10000, logarithmize the values with natural logarithm and perform standardization with the Single Cell Preprocess widget.
 
 <Question
-  id="sc-ex2-q7"
+  id="sc-ex2-q6"
   points={1}
   type="multi"
   question="Why do we need to normalize the gene expression values in single-cell analysis?"
@@ -128,7 +128,7 @@ Normalize expression values for each gene in each cell to counts per 10000, loga
 Map the genes in the dataset to the Entrez database.
 
 <Question
-  id="sc-ex2-q8"
+  id="sc-ex2-q7"
   points={1}
   type="multi"
   question="How many genes were matched to the Entrez database?"
@@ -148,7 +148,7 @@ Plot the preprocessed and annotated data in a new t-SNE plot and compare it to t
 
 
 
-
+### Task 4 - Batch Effect Correction
 
 
 
