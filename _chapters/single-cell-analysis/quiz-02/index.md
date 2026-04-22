@@ -71,12 +71,12 @@ b) Filter cells based on a minimum number of 500 and a maximum number of 3000 ex
   points={1}
   type="multi"
   question="Why do we filter out cells with extremely high or low gene expression counts?"
-  scorer={(answer) => answer === "All of the above."}
+  scorer={(answer) => answer === "all of the above"}
   options={[
-    "Cells with very few detected genes may be damaged or of low quality.",
-    "Cells with an unusually high number of expressed genes may be multiplets or artifacts.",
-    "Removing extreme cells improves the accuracy of downstream clustering and visualization.",
-    "All of the above."
+    "Cells with very few detected genes may be damaged or of low quality",
+    "Cells with an unusually high number of expressed genes may be multiplets or artifacts",
+    "Removing extreme cells improves the accuracy of downstream clustering and visualization",
+    "All of the above"
   ]}
   neutralOptions={["I don't understand the question."]}
   trials={2}
@@ -113,7 +113,7 @@ Normalize expression values for each gene in each cell to counts per 10000, loga
   type="multi"
   question="Why do we need to normalize the gene expression values in single-cell analysis?"
   scorer={(answer) => answer === "to account for sequencing depth and make gene expression values comparable across cells"}
-  options={["To eliminate biological variation between different cell types.", "To account for sequencing depth and make gene expression values comparable across cells.", "To change gene expression values so that all genes have the same expression level.", "Normalization is only needed for datasets with a small number of cells."]}
+  options={["To eliminate biological variation between different cell types", "To account for sequencing depth and make gene expression values comparable across cells", "To change gene expression values so that all genes have the same expression level", "Normalization is only needed for datasets with a small number of cells"]}
   neutralOptions={["I don't understand the question."]}
   trials={2}
   timeout={10}>
@@ -150,5 +150,80 @@ Plot the preprocessed and annotated data in a new t-SNE plot and compare it to t
 
 ### Task 4 - Batch Effect Correction
 
+Download the sample of a pancreas single cell gene expression dataset ([pancreas_sampled_1k5k.tab](http://file.biolab.si/datasets/pancreas_sampled_1k5k.tab)) and load it into Orange. Generate a t-SNE plot. 
 
 
+<Question
+  id="sc-ex2-q8"
+  points={1}
+  type="multi"
+  question="How many different batches are present in the dataset?"
+  scorer={(answer) => answer === "3"}
+  options={["11", "2", "3"]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+  <Explanation after="correctOrMaxTrials">
+  </Explanation>
+</Question>
+
+<Question
+  id="sc-ex2-q9"
+  points={1}
+  type="multi"
+  question="Why do we need to apply batch-correction?"
+  scorer={(answer) => answer === "to align datasets from different sources"}
+  options={["To normalize the data", "To align datasets from different sources", "To reduce the size of the dataset", "To separate datasets from different sources"]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+</Question>
+
+
+**Apply two different batch-effect correction methods to the dataset:**
+
+a) Using Align Datasets widget (set the Data source indicator to Batch and leave all other parameters at default values)
+
+
+b) Using Harmony widget (leave all parameters at their default values)
+
+**For each method, generate a t-SNE embedding of the corrected data. Compare t-SNE plots (uncorrected, Align Datasets corrected, Harmony corrected) side by side.**
+
+
+<Question
+  id="sc-ex2-q10"
+  points={1}
+  type="multi"
+  question="Just by looking at the t-SNE plots, which method more effectively removes batch effects (i.e., shows better mixing of batches and separation of cell type clusters)?"
+  scorer={(answer) => answer === "align datasets"}
+  options={["Harmony", "Neither removed any batch effects", "Align Datasets", "Both produce the same plot"]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+  <Explanation after="correctOrMaxTrials">
+  </Explanation>
+</Question>
+
+
+Start from the uncorrected dataset and create a second Harmony workflow: add a new Harmony widget, set the parameter theta to 2.5, and leave all other parameters at their default values. Connect the output of this widget to a new t-SNE plot and set the number of PC components used to 30.
+
+Compare this plot with the previous t-SNE plot obtained using Harmony with default parameters. Focus on how the change in theta affects the mixing of batches and the separation of clusters.
+
+
+<Question
+  id="sc-ex2-q11"
+  points={1}
+  type="multi"
+  question="Compared to the default Harmony settings, does increasing theta to 2.5 and using 30 principal components improve batch mixing and cluster separation?"
+  scorer={(answer) => answer === "yes, both are improved"}
+  options={[
+    "Yes, both are improved",
+    "No, there is no noticeable improvement in either",
+    "Batch mixing improves, but cluster separation becomes worse"
+  ]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+  <Explanation after="correctOrMaxTrials">
+  </Explanation>
+</Question>
