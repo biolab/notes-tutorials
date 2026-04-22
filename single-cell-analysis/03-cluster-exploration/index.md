@@ -6,6 +6,7 @@ chapters:
     - single-cell-analysis/07-clusters
     - single-cell-analysis/08-cluster-exploration
     - single-cell-analysis/09-visual-annotation
+    - single-cell-analysis/quiz-03
 --- 
 
 

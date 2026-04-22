@@ -2,11 +2,6 @@
 title: 'Quality Control and Data Preprocessing'
 ---
 
-Study the following chapters to answer the quiz section below:
-
-- <a href="/books/single-cell-tutorial-notes#Data-Preprocessing)" target="_blank">Chapter 4: Data Filtering and Preprocessing</a>
-
-
 ### Task 1 - Quality control 
 
 Perform quality control on the expression matrix.
