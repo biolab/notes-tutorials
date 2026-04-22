@@ -1,7 +1,7 @@
 ---
-title: 'Clusters'
+title: 'Exploring Clusters'
 subTitle: ''
-requireLogin: false
+requireLogin: true
 quizThreshold: 0.6
 chapters: 
     - single-cell-analysis/06-marker-genes
@@ -22,9 +22,7 @@ Following are the main concepts we will cover:
 
 - **Cell Scoring:** Assigning scores to cells based on marker gene expression. 
 
-- **Clustering:** Grouping similar cells based on gene expression patterns.  
-
-- **Louvain Clustering:** A method for detecting groups (clusters) of similar cells.  
+- **Clustering:** Grouping similar cells based on gene expression patterns.   
 
 - **Differential Expression:** Identifying genes that differ between groups of cells.  
 
