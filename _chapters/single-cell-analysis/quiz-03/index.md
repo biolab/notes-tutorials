@@ -23,7 +23,9 @@ title: 'Quiz'
   timeout={10}>
 </Question>
 
-Perform cluster exploration on the retinal dataset. Use the data table of known marker genes ([sc-quiz-marker-genes.xlsx](http://file.biolab.si/datasets/sc-quiz-marker-genes.xlsx)) for each cell type (don't forget to pass the marker genes data though the Genes widget to annotate!) and set the aggregation parameter in the Score Cells widget to **Fraction of expressed markers**. 
+Perform cluster exploration on the retinal dataset. Remember, you have already performed quality control and preprocessing steps on it, as well as annotation.
+
+a) Use the data table of known marker genes ([sc-quiz-marker-genes.xlsx](http://file.biolab.si/datasets/sc-quiz-marker-genes.xlsx)) for each cell type (don't forget to pass the marker genes data though the Genes widget to annotate!) and set the aggregation parameter in the Score Cells widget to **Fraction of expressed markers**. 
 
 ![](sc-ex3-q2.jpg)
 
@@ -89,7 +91,7 @@ Liang et al. report that in the peripheral tissue the proportion of rods in comp
 </Question>
 
 
-Select the top 100 genes that are differentially expressed in cones in comparison to non-cones (T-test). Forward them to the GO widget. Sort the lower list by increasing p-value.
+Select the top 100 genes that are differentially expressed in cones in comparison to non-cones (T-test). Forward them to the GO widget. Sort the lower list in the GO widget by increasing p-value. Enlarge the window so you see the enhancement scores on the right side. Scroll down and identify the first three GO terms with a high-p value and an an enrichment score above 40 (you can see the numerical enrichment score by hovering over the bar representation of it on the right side of the window).
 
 <Question
   id="sc-ex3-q5"
