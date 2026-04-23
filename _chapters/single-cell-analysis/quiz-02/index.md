@@ -150,11 +150,41 @@ Plot the preprocessed and annotated data in a new t-SNE plot and compare it to t
 
 ### Task 4 - Batch Effect Correction
 
-Download the sample of a pancreas single cell gene expression dataset ([pancreas_sampled_1k5k.tab](http://file.biolab.si/datasets/pancreas_sampled_1k5k.tab)) and load it into Orange. Generate a t-SNE plot. 
-
 
 <Question
   id="sc-ex2-q8"
+  points={1}
+  type="multi"
+  question="What is a batch in single cell analysis?"
+  scorer={(answer) => answer === "a group of cells processed under the same technical conditions"}
+  options={["A group of cells from the same tissue", "A group of cells from the same patient", "A group of cells processed under the same technical conditions", "A procedure that removes unwanted technical variability from the data"]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+</Question>
+
+
+<Question
+  id="sc-ex2-q9"
+  points={1}
+  type="multi"
+  question="Why do we need to apply batch-correction?"
+  scorer={(answer) => answer === "to correct for technical differences so datasets can be compared"}
+  options={["To normalize the data", "To correct for technical differences so datasets can be compared", "To reduce the size of the dataset", "To separate datasets from different sources"]}
+  neutralOptions={["I don't understand the question."]}
+  trials={2}
+  timeout={10}>
+</Question>
+
+
+
+**Perform batch effect correction on the following data:**
+
+a) Download a sample of a pancreas single-cell gene expression dataset ([pancreas_sampled_1k5k.tab](http://file.biolab.si/datasets/pancreas_sampled_1k5k.tab)) and load it into Orange. The dataset already includes a metafeature, _Batch_, which indicates the sequencing procedure used to obtain each measurement. Generate a t-SNE plot. 
+
+
+<Question
+  id="sc-ex2-q10"
   points={1}
   type="multi"
   question="How many different batches are present in the dataset?"
@@ -170,31 +200,20 @@ Download the sample of a pancreas single cell gene expression dataset ([pancreas
   </Explanation>
 </Question>
 
-<Question
-  id="sc-ex2-q9"
-  points={1}
-  type="multi"
-  question="Why do we need to apply batch-correction?"
-  scorer={(answer) => answer === "to align datasets from different sources"}
-  options={["To normalize the data", "To align datasets from different sources", "To reduce the size of the dataset", "To separate datasets from different sources"]}
-  neutralOptions={["I don't understand the question."]}
-  trials={2}
-  timeout={10}>
-</Question>
 
 
-**Apply two different batch-effect correction methods to the dataset:**
+b) Apply two different batch-effect correction methods to the dataset:
 
-a) Using Align Datasets widget (set the Data source indicator to Batch and leave all other parameters at default values)
+i) Using Align Datasets widget (set the Data source indicator to Batch and leave all other parameters at default values)
 
 
-b) Using Harmony widget (leave all parameters at their default values)
+ii) Using Harmony widget (leave all parameters at their default values)
 
-**For each method, generate a t-SNE embedding of the corrected data. Compare t-SNE plots (uncorrected, Align Datasets corrected, Harmony corrected) side by side.**
+For each method, generate a t-SNE embedding of the corrected data. Compare t-SNE plots (uncorrected, Align Datasets corrected, Harmony corrected) side by side.
 
 
 <Question
-  id="sc-ex2-q10"
+  id="sc-ex2-q11"
   points={1}
   type="multi"
   question="Just by looking at the t-SNE plots, which method more effectively removes batch effects (i.e., shows better mixing of batches and separation of cell type clusters)?"
@@ -215,11 +234,11 @@ b) Using Harmony widget (leave all parameters at their default values)
 
 Start from the uncorrected dataset and create a second Harmony workflow: add a new Harmony widget, set the parameter theta to 2.5, and leave all other parameters at their default values. Connect the output of this widget to a new t-SNE plot and set the number of PC components used to 30.
 
-Compare this plot with the previous t-SNE plot obtained using Harmony with default parameters. Focus on how the change in theta affects the mixing of batches and the separation of clusters.
+Compare this plot with the previous t-SNE plot obtained using Harmony with default parameters. Focus on how the change in theta and the number of PC components affects the mixing of batches and the separation of clusters.
 
 
 <Question
-  id="sc-ex2-q11"
+  id="sc-ex2-q12"
   points={1}
   type="multi"
   question="Compared to the default Harmony settings, does increasing theta to 2.5 and using 30 principal components improve batch mixing and cluster separation?"

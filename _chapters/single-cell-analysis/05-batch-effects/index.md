@@ -4,12 +4,12 @@ title: 'Batch Effects Correction'
 
 ## Batch Effects Correction
 
+<!!! float-aside !!!>
+A batch is a group of samples (cells) that are processed together under the same experimental conditions
 
+In single-cell analysis, we often work with data from multiple sources, such as different experiments, laboratories, or patient samples. A batch refers to a group of samples that were processed under the same technical conditions, for example, in the same lab, using the same protocol, reagents, or sequencing run. Differences between batches can introduce batch effects, which are sources of unwanted technical variation. These must be distinguished from biological variation which are typically the focus of analysis.
 
-
-In single cell analysis, we often deal with data from several different sources, be it from a different provider, different experiments or simply different batches. A “batch” refers to an individual group of samples that are processed differently relative to other samples. This different processing when gathering a batch of data can affect variation in the obtained data. The technical, non-biological factors that affect variation in batches are reffered to as batch effects.
-
-Batch effects are problematic because they hinder our ability to measure true biological variation between samples, which is what we are interested in. Luckily, they can be dealt with computationally by aligning data from different batches. 
+Batch effects are problematic because they obscure these biological differences and make comparisons between samples unreliable. Luckily, they can be dealt with computationally by aligning data from different batches. 
 
 There are different approaches to align data sets and remove batch effects. Orange currently implements three: one through the [Batch Effect Removal](https://orangedatamining.com/widget-catalog/single-cell/batch_effect_removal/) widget, the second, more standard, using canonical correlation implemented in the widget [Align Datasets](https://orangedatamining.com/widget-catalog/single-cell/align_datasets/) and the third, most recently added, in the Harmony widget.
 
@@ -39,13 +39,13 @@ In our exploration of data integration methods, we'll first look at a technique 
 
 Next, let's revisit the Align Datasets widget to fine-tune the parameters for potentially improved clustering. A common strategy is to start with a reduced number of components. Orange seamlessly propagates the transformed data to t-SNE, where we see an updated plot. The alignment between the two datasets appears significantly improved.
 
-Let's explore the second data alignment method implemented by the Batch Effect Removal widget. We add this widget to our canvas and feed it the combined data. When opening the widget we have to set the distinguishing feature for different batches; in our case, this is the Source ID. We'll also leave the "Skip zero expressions" option unchecked. After applying this correction and visualizing the results in t-SNE, with colors representing cell classes and shapes representing data sources, we observe an interesting result. While some clusters of identical cell types from different sources merge into cohesive units, others remain distinct. It appears that the Align Datasets widget outperformed the Batch Effect Removal method in this case.
+Let's explore the second data alignment method implemented by the Batch Effect Removal widget. We add this widget to our canvas and feed it the combined data. When opening the widget we have to set the distinguishing feature for different batches: in our case, this is the Source ID. We'll also leave the "Skip zero expressions" option unchecked. After applying this correction and visualizing the results in t-SNE, with colors representing cell classes and shapes representing data sources, we observe an interesting result. While some clusters of identical cell types from different sources merge into cohesive units, others remain distinct. It appears that the Align Datasets widget outperformed the Batch Effect Removal method in this case.
 
 <!!! width-max !!!>
 ![](sc-notes-04-05_75.jpg)
 
 
-Let us now try Harmony, the third method available in Orange. Harmony has achieved good results in the [Batch integration benchmark study](https://openproblems.bio/benchmarks/batch_integration?version=v2.0.0), making it a robust general-purpose method for integrating single-cell datasets across batches. As before, we pass the concatenated data to the Harmony widget and specify Source ID as the batch-defining variable, leaving the remaining parameters at their default values for now. We then visualize the transformed data using t-SNE. The resulting plot shows that cells of the same type remain clustered together. What about the batch effect correction? To assess batch mixing, we set the Shape parameter to indicate the data source; this reveals that cells from different batches are now well mixed rather than forming separate clusters. Thus by using Harmony we have effectively reduced batch effects while preserving biologically meaningful structure for downstream analysis.
+Let us now try Harmony, the third method available in Orange. Harmony has achieved good results in the [Batch integration benchmark study](https://openproblems.bio/benchmarks/batch_integration?version=v2.0.0), making it a robust general-purpose method for integrating single-cell datasets across batches. As before, we pass the concatenated data to the Harmony widget and specify Source ID as the batch-defining variable, leaving the remaining parameters at their default values for now. We then visualize the transformed data using t-SNE. The resulting plot shows that cells of the same type remain clustered together. What about the batch effect correction? To assess batch mixing, we set the Shape parameter to indicate the data source: this reveals that cells from different batches are now well mixed rather than forming separate clusters. By using Harmony we have effectively reduced batch effects while preserving biologically meaningful structure for downstream analysis.
 
 <!!! float-aside !!!>
 Among the three main parameters in Harmony (sigma, theta, and lambda), it is often useful to adjust theta, which controls the strength of batch correction: lower values result in weaker batch correction, whereas higher values enforce stronger mixing between batches.
