@@ -3,6 +3,10 @@ title: 'Exploring Clusters'
 subTitle: ''
 requireLogin: true
 quizThreshold: 0.6
+admins:
+ - blaz.zupan@fri.uni-lj.si
+ - bzupan@gmail.com
+ - eli.praznik@gmail.com
 chapters: 
     - single-cell-analysis/06-marker-genes
     - single-cell-analysis/07-clusters

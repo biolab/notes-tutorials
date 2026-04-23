@@ -3,6 +3,10 @@ title: 'Quality Control, Preprocessing and Batch Effect Correction'
 subTitle: ''
 requireLogin: true
 quizThreshold: 0.6
+admins:
+ - blaz.zupan@fri.uni-lj.si
+ - bzupan@gmail.com
+ - eli.praznik@gmail.com
 chapters: 
     - single-cell-analysis/04-preprocessing
     - single-cell-analysis/05-batch-effects
