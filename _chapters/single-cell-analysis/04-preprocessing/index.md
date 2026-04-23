@@ -2,7 +2,7 @@
 title: ' Data Filtering and Preprocessing'
 
 ---
-Single-cell datasets can have a lot of technical variability issues. Each cell will generally capture a varying number of reads. This will cause some cells to have too low of a signal to be useful. Additionally, genes range from ever-active housekeeping genes to specialized genes that are only expressed in particular cell types or under certain conditions. Employing filtering techniques and preprocessing steps becomes crucial to prepare the data for subsequent analyses.
+Single-cell datasets can have a lot of **technical variability issues**. In contrast to bulk RNA sequencing, where measurements come from many cells at once and random noise is averaged out, in single-cell data each measurement comes from just one cell. Because the amount of RNA is very small, **small technical differences and random sampling effects have a much larger impact**, leading to high variability and many low or zero measurements (dropouts). As a result, some cells may have signal that is too low to be useful. In addition, **gene expression levels vary widely**, from consistently expressed housekeeping genes to genes that are only active in specific cell types or conditions. Therefore, filtering and preprocessing steps are essential to obtain reliable results for downstream analysis.
 
 ## Filtering or quality control
 

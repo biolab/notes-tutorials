@@ -24,7 +24,8 @@ The output of the widget is a table that includes a gene name and cell type, bot
 
 The idea is now that we would select the gene(s) from the data table, and then score the cells according to the mean expression of selected genes. Widget Score Cells assigns a numerical score to each cell that is proportional to an average expression of the marker genes at the input of the widget. The score is added as a meta attribute to the cell data on the output of Score Cells. Check this using the Data Table! We can now feed this data into t-SNE and set the color and size of the points to the cell score.
 
-Notice that with any change in the selection of marker genes, we find a group of cells in t-SNE plot where these genes are expressed. Looks like T cells are in the bottom right cluster, B cells somewhere in the middle, and erythrocytes in the left cluster. Did we say cluster? Oh, we are not there yet…
+Notice that with any change in the selection of marker genes, we find a group of cells in t-SNE plot where these genes are expressed. Looks like T cells are in the bottom right cluster, B cells somewhere in the middle, and erythrocytes in the left cluster. Did we say cluster? 
+ <br /> 
 
 <!!! width-max !!!>
 ![](sc-notes-06-04_75.jpg)
