@@ -3,6 +3,10 @@ title: 'Single-Cell Expression Data'
 subTitle: ''
 requireLogin: true
 quizThreshold: 0.6
+admins:
+ - blaz.zupan@fri.uni-lj.si
+ - bzupan@gmail.com
+ - eli.praznik@gmail.com
 chapters: 
     - single-cell-analysis/01-introduction
     - single-cell-analysis/02-sc-data
