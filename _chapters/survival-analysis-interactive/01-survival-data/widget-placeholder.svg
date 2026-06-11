@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Interactive widget placeholder">
+  <rect x="2" y="2" width="596" height="356" fill="#f4f4f6" stroke="#b0b0b8" stroke-width="2" stroke-dasharray="8 6" rx="8"/>
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="300" y="172" font-size="22" fill="#4a4a55">Interactive widget</text>
+    <text x="300" y="200" font-size="14" fill="#7a7a85">iframe will be embedded here</text>
+  </g>
+</svg>
