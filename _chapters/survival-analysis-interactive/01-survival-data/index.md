@@ -99,7 +99,7 @@ We can now easily transform this diagram into a data table. We order the data in
 
 
 <WidgetIframe
-  src="https://lab.orangedatamining.com/embed/5103afe3-dae2-46b7-86ef-48d04c2b68a5/32aaedaa-cabd-402f-9370-6dee5fee37f6?hidden=footer,header&theme=Light"
+  src="https://lab.orangedatamining.com/embed/5103afe3-dae2-46b7-86ef-48d04c2b68a5/32aaedaa-cabd-402f-9370-6dee5fee37f6?hidden=footer,header&theme=Light&code=wooden-screw-68"
   height="400px"
 />
 
@@ -203,7 +203,7 @@ Doing the calculation by hand once builds intuition. After that, we let a comput
 
 <FullWidth>
   <WidgetIframe
-    src="https://lab.orangedatamining.com/embed/5103afe3-dae2-46b7-86ef-48d04c2b68a5/eefa1b23-f78a-45f1-81e4-58bf7276f341?hidden=sidebar,header,footer&theme=Light"
+    src="https://lab.orangedatamining.com/embed/5103afe3-dae2-46b7-86ef-48d04c2b68a5/eefa1b23-f78a-45f1-81e4-58bf7276f341?hidden=sidebar,header,footer&theme=Light&code=wooden-screw-68"
     height="800px"
   />
 </FullWidth>
