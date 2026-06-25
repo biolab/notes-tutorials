@@ -11,7 +11,7 @@ The first additional feature concerns the type of material out of which the dent
 **See the table below:**
 
 <WidgetIframe
-  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/3b7437fb-1079-4011-bc3f-747761bdb183?hidden=header,footer&theme=Light&code=wooden-screw-68"
+  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/3b7437fb-1079-4011-bc3f-747761bdb183?hidden=header,footer&theme=Light&code=important-procedure-74"
   height="600px"
 />
 
@@ -23,7 +23,7 @@ When we have a categorical feature, such as the type of material, it's easy to f
 
 <FullWidth>
   <WidgetIframe
-    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/da6c5f69-0201-407e-9131-bceefc187f18?hidden=footer,sidebar,header&theme=Light&code=wooden-screw-68"  
+    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/da6c5f69-0201-407e-9131-bceefc187f18?hidden=footer,sidebar,header&theme=Light&code=important-procedure-74"  
     height="700px"
   />
 </FullWidth>
@@ -73,9 +73,9 @@ On the other hand, if we want to group by a continuous feature we have to define
 Below, set the threshold to **brushing time > 6 minutes**. Then use the Kaplan-Meier widget and group by the newly created feature (called 'Selected'). Two curves should appear — one for those that brush more than 6 minutes a day, one for those that brush less. Feel free to experiment with different thresholds and see how the curves change.
 
 <FullWidth>
-    <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/e22b3fab-0443-4335-82d1-418ed45a838e?hidden=footer,header&theme=Light&code=wooden-screw-68" 
+    <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/e22b3fab-0443-4335-82d1-418ed45a838e?hidden=footer,header&theme=Light&code=important-procedure-74" 
     height="300px" />
-    <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/dbe0bafe-cdba-4597-bdea-6f870b3b873d?hidden=display,footer,header&theme=Light&code=wooden-screw-68"  h
+    <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/dbe0bafe-cdba-4597-bdea-6f870b3b873d?hidden=display,footer,header&theme=Light&code=important-procedure-74"  h
     eight="700px"/>
 </FullWidth>
 

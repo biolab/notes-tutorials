@@ -8,7 +8,7 @@ For this example let's use the **German Breast Cancer Study Group** data. The fi
 
 
 <WidgetIframe 
-  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/2f0e56aa-b31d-44d0-95fd-aa74899b5c66?hidden=footer,header&theme=Light&code=wooden-screw-68" 
+  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/2f0e56aa-b31d-44d0-95fd-aa74899b5c66?hidden=footer,header&theme=Light&code=important-procedure-74" 
   height="600px" 
 />
 
@@ -16,7 +16,7 @@ We already know how to form and compare groups manually. For categorical feature
 
 <FullWidth>
   <WidgetIframe 
-    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/9377c96e-3b43-42fd-bf25-054729894407?hidden=footer,header,survival-variables/event,survival-variables/time&theme=Light&code=wooden-screw-68"  
+    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/9377c96e-3b43-42fd-bf25-054729894407?hidden=footer,header,survival-variables/event,survival-variables/time&theme=Light&code=important-procedure-74"  
     height="700px" />
 </FullWidth>
 
@@ -60,14 +60,14 @@ Using numeric features to form cohorts takes an extra step; we need to define a 
 
 <FullWidth>
   <WidgetIframe
-    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/588ec724-16fe-4f8b-b811-3add3b36fcc5?hidden=columns,distribution,header,footer&theme=Light&code=wooden-screw-68"
+    src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/588ec724-16fe-4f8b-b811-3add3b36fcc5?hidden=columns,distribution,header,footer&theme=Light&code=important-procedure-74"
     height="550px"
   />
 </FullWidth>
 
 <FullWidth>
 <WidgetIframe
-  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/6748550b-4e73-4db0-8238-65a915358c62?hidden=survival-variables/event,survival-variables/time,header,footer&theme=Light&code=wooden-screw-68"
+  src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/6748550b-4e73-4db0-8238-65a915358c62?hidden=survival-variables/event,survival-variables/time,header,footer&theme=Light&code=important-procedure-74"
   height="650px"
 />
 </FullWidth>

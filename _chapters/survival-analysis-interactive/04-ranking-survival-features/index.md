@@ -14,11 +14,11 @@ Let's look at the **Rank Survival Features** widget, which forms cohorts by spli
 <FullWidth>
   <div style={{ display: "flex", gap: "16px", width: "100%" }}>
     <div style={{ width: "calc(40% - 2px)", minWidth: 0 }}>
-      <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/286831a5-6e62-4f8f-90c3-8eca7fb21426?hidden=sidebar,header,footer&theme=Light&code=wooden-screw-68" height="700px" />
+      <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/286831a5-6e62-4f8f-90c3-8eca7fb21426?hidden=sidebar,header,footer&theme=Light&code=important-procedure-74" height="700px" />
     </div>
 
     <div style={{ width: "calc(60% - 2px)", minWidth: 0 }}>
-      <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/ccb9b5e4-dc15-48e3-985c-6d1673292684?hidden=sidebar,footer,header&theme=Light&code=wooden-screw-68" height="700px" />
+      <WidgetIframe src="https://lab.orangedatamining.com/embed/7b29d5d3-b56f-4526-b6d9-3019d69c8fda/ccb9b5e4-dc15-48e3-985c-6d1673292684?hidden=sidebar,footer,header&theme=Light&code=important-procedure-74" height="700px" />
     </div>
   </div>
 </FullWidth>
